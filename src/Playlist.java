@@ -33,6 +33,13 @@ public class Playlist {
         desertIslandPlaylist.remove(1);
         desertIslandPlaylist.remove(4);
 
+        int songA = desertIslandPlaylist.indexOf("Take on me - A-ha");
+        int songB = desertIslandPlaylist.indexOf("Stand by me - Tracy Chapman");
+
+        String tempA = desertIslandPlaylist.get(songA);
+        desertIslandPlaylist.set(songA, desertIslandPlaylist.get(songB));
+        desertIslandPlaylist.set(songB, tempA);
+
     }
     ArrayList<String> desertIslandPlaylist = new ArrayList<>();
     public void playSongs(){
@@ -48,4 +55,5 @@ public class Playlist {
 
 
     }
+
 }
